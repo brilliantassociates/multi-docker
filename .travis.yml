@@ -11,7 +11,7 @@ script:
 after_success:
   - docker build -t brilliantassociates/multi-client ./client
   - docker build -t brilliantassociates/multi-nginx ./nginx
-  - docker build -t brilliantassociates/mutli-server ./server
+  - docker build -t brilliantassociates/multi-server ./server
   - docker build -t brilliantassociates/multi-worker ./worker
 
   # login to docker
