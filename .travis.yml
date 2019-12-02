@@ -23,4 +23,17 @@ after_success:
   - docker push brilliantassociates/multi-server
   - docker push brilliantassociates/multi-worker
 
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  app: multi-docker
+  env: multi-docker-env-2
+  bucket-name: elasticbeanstalk-us-east-1-858193300132
+  bucker-path: docker-multi
+  on:
+      branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: 
+    secure: $AWS_SECREY_KEY
+
 
